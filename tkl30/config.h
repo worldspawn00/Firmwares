@@ -7,8 +7,8 @@
 #define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0x6060
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    qmkbuilder
-#define PRODUCT         keyboard
+#define MANUFACTURER    worldspawn
+#define PRODUCT         TKL30
 #define DESCRIPTION     Keyboard
 
 /* key matrix size */
@@ -25,8 +25,8 @@
 
 /* number of backlight levels */
 
-#ifdef BACKLIGHT_PIN
-#define BACKLIGHT_LEVELS 0
+#ifdef BACKLIGHT_PIN B7
+#define BACKLIGHT_LEVELS 1
 #endif
 
 /* Set 0 if debouncing isn't needed */
@@ -47,9 +47,10 @@
 #define PREVENT_STUCK_MODIFIERS
 
 
+#define RGB_DI_PIN B1
 #ifdef RGB_DI_PIN
 #define RGBLIGHT_ANIMATIONS
-#define RGBLED_NUM 0
+#define RGBLED_NUM 1
 #define RGBLIGHT_HUE_STEP 8
 #define RGBLIGHT_SAT_STEP 8
 #define RGBLIGHT_VAL_STEP 8
