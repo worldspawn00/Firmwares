@@ -22,7 +22,7 @@ void matrix_init_kb(void) {
 
 	matrix_init_user();
 }
-
+/*
 void led_set_kb(uint8_t usb_led) {
     // put your keyboard LED indicator (ex: Caps Lock LED) toggling code here
     if (IS_LED_ON(usb_led, USB_LED_NUM_LOCK)) {
@@ -36,17 +36,18 @@ void led_set_kb(uint8_t usb_led) {
     } else {
         writePinLow(F6);
     }
-/*
+
     if (IS_LED_ON(usb_led, USB_LED_SCROLL_LOCK)) {
         writePinHigh(F5);
     } else {
         writePinLow(F5);
-    }*/
+    }
 	
 	
 
     led_set_user(usb_led);
 }
+*/
 
 //function for layer indicator LED
 uint32_t layer_state_set_user(uint32_t state)
