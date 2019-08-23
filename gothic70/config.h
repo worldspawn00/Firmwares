@@ -24,7 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT_ID      0x0000
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    Worldspawn
-#define PRODUCT         arisu 1.1a
+#define PRODUCT         Gothic70
 #define DESCRIPTION     Expanded Ergo Keyboard
 
 /* key matrix size */
@@ -59,11 +59,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
  #define RGB_DI_PIN F4
  #ifdef RGB_DI_PIN
-   #define RGBLED_NUM 10
+   #define RGBLED_NUM 20
    #define RGBLIGHT_HUE_STEP 8
    #define RGBLIGHT_SAT_STEP 8
    #define RGBLIGHT_VAL_STEP 8
-   #define RGBLIGHT_LIMIT_VAL 100 /* The maximum brightness level */
+   #define RGBLIGHT_LIMIT_VAL 64 /* The maximum brightness level */
    #define RGBLIGHT_SLEEP  /* If defined, the RGB lighting will be switched off when the host goes to sleep */
 // /*== all animations enable ==*/
    #define RGBLIGHT_ANIMATIONS
