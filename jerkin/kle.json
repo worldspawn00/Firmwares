@@ -1,0 +1,114 @@
+[
+  [
+    {
+      "y": 0.5,
+      "x": 0.57
+    },
+    "Esc  `\n\n\n\n\n\n\n\n\nRst",
+    "Q\n\n\n\n\n\n\n\n1\nF1",
+    {
+      "x": 8.6
+    },
+    "P\n\n\n\n\n\n\n\n0\nF10",
+    "[\n\n\n\n\n\n\n\n]\nF11",
+    "BS \\\n\n\n\n\n\n\n\n\nF12"
+  ],
+  [
+    {
+      "x": 0.4,
+      "w": 1.25
+    },
+    "Tab\n\n\n\n\n\n\n\n\n(Ctrl)",
+    "A\n\n\n\n\n\n\n\n-",
+    {
+      "x": 8.92
+    },
+    "'\n\n\n\n\n\n\n\n;\nIns",
+    {
+      "w": 1.75
+    },
+    "Enter\n\n\n\n\n\n\n\n\n(L2)"
+  ],
+  [
+    {
+      "x": 0.2,
+      "w": 1.75
+    },
+    "Shift",
+    "Z",
+    {
+      "x": 8.350000000000001
+    },
+    ".\n\n\n\n\n\n\n\n\n(Alt)",
+    "/\n\n\n\n\n\n\n\nPsc\n(GUI)",
+    {
+      "w": 1.25
+    },
+    "Del\n\n\n\n\n\n\n\n\n(Shift)"
+  ],
+  [
+    {
+      "y": 0.25,
+      "d": true
+    },
+    "L0 L1\n(Hold)\n\n\n\n\n\n\n\nL2"
+  ],
+  [
+    {
+      "r": 10,
+      "y": -4.75,
+      "x": 2.75
+    },
+    "W\n\n\n\n\n\n\n\n2\nF2",
+    "E\n\n\n\n\n\n\n\n3\nF3",
+    "R\n\n\n\n\n\n\n\n4\nF4",
+    "T\n\n\n\n\n\n\n\n5\nF5"
+  ],
+  [
+    {
+      "x": 3
+    },
+    "S\n\n\n\n\n\n\n\n=",
+    "D\n\n\n\n\n\n\n\n\\",
+    "F",
+    "G"
+  ],
+  [
+    {
+      "x": 3.5
+    },
+    "X",
+    "C",
+    "V",
+    "B\n\n\n\n\n\n\n\n\nNvyS"
+  ],
+  [
+    {
+      "r": -10,
+      "y": -0.5499999999999998,
+      "x": 6.75
+    },
+    "Y\n\n\n\n\n\n\n\n6\nF6",
+    "U\n\n\n\n\n\n\n\n7\nF7",
+    "I\n\n\n\n\n\n\n\n8\nF8",
+    "O\n\n\n\n\n\n\n\n9\nF9"
+  ],
+  [
+    {
+      "x": 7
+    },
+    "H\n\n\n\n\n\n\n\nLft\nHom",
+    "J\n\n\n\n\n\n\n\nDn\nPgDn",
+    "K\n\n\n\n\n\n\n\nUp\nPgUp",
+    "L\n\n\n\n\n\n\n\nRgt\nEnd"
+  ],
+  [
+    {
+      "x": 6.55
+    },
+    "Spc\n\n\n\n\n\n\n\n\n(L1)",
+    "N",
+    "M",
+    ","
+  ]
+]
