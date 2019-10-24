@@ -36,15 +36,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 void matrix_init_user(void) {
-  // set CapsLock LED to output and lowprimekb
-  setPinOutput(F5);
-  writePinHigh(F5);
+  // set CapsLock LED to output and low
+  setPinOutput(F7);
+  writePinLow(F7);
   // set NumLock LED to output and low
   setPinOutput(F6);
-  writePinHigh(F6);
+  writePinLow(F6);
   // set ScrollLock LED to output and low
-  setPinOutput(F7);
-  writePinHigh(F7);
+  setPinOutput(F5);
+  writePinLow(F5);
 }
 
 void matrix_scan_user(void) {
@@ -57,27 +57,29 @@ uint32_t layer_state_set_user(uint32_t state)
     if (state & (1<<1)) {
     writePinHigh(F5);
     } else if (state & (1<<2)) {
-        writePinHigh(F5);
+        writePinLow(F5);
         writePinHigh(F6);
     } else if (state & (1<<3)) {
         writePinHigh(F5);
         writePinHigh(F6);
-        writePinHigh(F7);
-    } else if (state & (1<<4)) {
-        writePinLow(F5);
-        writePinHigh(F6);
-        writePinHigh(F7);
     } else {
         writePinLow(F5);
         writePinLow(F6);
-        writePinLow(F7);
     }
     return state;
 }
 
+void led_set_user(uint8_t usb_led) {
+    if (IS_LED_ON(usb_led, USB_LED_CAPS_LOCK)) {
+        writePinHigh(F7);
+    } else {
+        writePinLow(F7);
+    }
+}
+
 // Tap Dance Definitions
 qk_tap_dance_action_t tap_dance_actions[] = {
-    // Tap once for 
+    // double tap for caps
     [TD_SCAPS] = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, KC_CAPS),
     
 };
