@@ -41,37 +41,35 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     return true;
 }	
+
+void matrix_init_user(void) {
+  // set CapsLock LED to output and low
+  setPinOutput(B2);
+  writePinLow(B2);
+  // set NumLock LED to output and low
+  setPinOutput(B6);
+  writePinLow(B6);
+  
+}
+
+void matrix_scan_user(void) {
+
+}
 	
-void led_set_user(uint8_t usb_led) {
-
-	if (usb_led & (1 << USB_LED_NUM_LOCK)) {
-		DDRB |= (1 << 2); PORTB &= ~(1 << 2);
-	} else {
-		DDRB &= ~(1 << 2); PORTB &= ~(1 << 2);
-	}
-
-	if (usb_led & (1 << USB_LED_CAPS_LOCK)) {
-		DDRB |= (1 << 6); PORTB &= ~(1 << 6);
-	} else {
-		DDRB &= ~(1 << 6); PORTB &= ~(1 << 6);
-	}
-
-	if (usb_led & (1 << USB_LED_SCROLL_LOCK)) {
-		
-	} else {
-		
-	}
-
-	if (usb_led & (1 << USB_LED_COMPOSE)) {
-		
-	} else {
-		
-	}
-
-	if (usb_led & (1 << USB_LED_KANA)) {
-		
-	} else {
-		
-	}
-
+	
+uint32_t layer_state_set_user(uint32_t state)
+{
+    if (state & (1<<1)) {
+    writePinHigh(B2);
+    } else if (state & (1<<2)) {
+        writePinLow(B2);
+        writePinHigh(B6);
+    } else if (state & (1<<3)) {
+        writePinHigh(B2);
+        writePinHigh(B6);
+    } else {
+        writePinLow(B2);
+        writePinLow(B6);
+    }
+    return state;
 }
