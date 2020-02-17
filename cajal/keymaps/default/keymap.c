@@ -1,4 +1,4 @@
-#include "kb.h"
+#include QMK_KEYBOARD_H
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -100,55 +100,47 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
-const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt) {
-	keyevent_t event = record->event;
 
-	switch (id) {
-
-	}
-	return MACRO_NONE;
-}
 
 void matrix_init_user(void) {
+  // set CapsLock LED to output and low
+  setPinOutput(B5);
+  writePinLow(B5);
+  // set NumLock LED to output and low
+  setPinOutput(B6);
+  writePinLow(B6);
+  // set ScrollLock LED to output and low
+  setPinOutput(B7);
+  writePinLow(B7);
 }
 
 void matrix_scan_user(void) {
+
 }
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-	return true;
+
+uint32_t layer_state_set_user(uint32_t state)
+{
+    if (state & (1<<1)) {
+    writePinHigh(B7);
+	 writePinLow(B6);
+    } else if (state & (1<<2)) {
+        writePinLow(B7);
+        writePinHigh(B6);
+    } else if (state & (1<<3)) {
+        writePinHigh(B7);
+        writePinHigh(B6);
+    } else {
+        writePinLow(B7);
+        writePinLow(B6);
+    }
+    return state;
 }
 
 void led_set_user(uint8_t usb_led) {
-
-	if (usb_led & (1 << USB_LED_NUM_LOCK)) {
-		DDRB |= (1 << 5); PORTB &= ~(1 << 5);
-	} else {
-		DDRB &= ~(1 << 5); PORTB &= ~(1 << 5);
-	}
-
-	if (usb_led & (1 << USB_LED_CAPS_LOCK)) {
-		DDRB |= (1 << 6); PORTB &= ~(1 << 6);
-	} else {
-		DDRB &= ~(1 << 6); PORTB &= ~(1 << 6);
-	}
-
-	if (usb_led & (1 << USB_LED_SCROLL_LOCK)) {
-		DDRB |= (1 << 7); PORTB &= ~(1 << 7);
-	} else {
-		DDRB &= ~(1 << 7); PORTB &= ~(1 << 7);
-	}
-
-	if (usb_led & (1 << USB_LED_COMPOSE)) {
-		
-	} else {
-		
-	}
-
-	if (usb_led & (1 << USB_LED_KANA)) {
-		
-	} else {
-		
-	}
-
+    if (IS_LED_ON(usb_led, USB_LED_CAPS_LOCK)) {
+        writePinHigh(B5);
+    } else {
+        writePinLow(B5);
+    }
 }
