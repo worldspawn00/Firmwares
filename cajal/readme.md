@@ -1,6 +1,6 @@
 # Cajal
 
-![Cajal](https://i.imgur.com/lTMVpvk.png)  
+![Cajal](https://i.imgur.com/FVKq7WH.png)  
 
 The Cajal is a premium 45% keyboard with stagger or ortho layout options.  
 
