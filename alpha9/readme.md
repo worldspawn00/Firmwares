@@ -2,7 +2,7 @@
 
 ![Alpha9](https://i.imgur.com/mLWff9a.png)
 
-A reverible 37 position keyboard based on the Alpha 28-key, semi-ortho keyboard designed by PyroL!
+A reversible 37 position keyboard based on the Alpha 28-key, semi-ortho keyboard designed by PyroL!
 
 Keyboard Maintainer: [Worldspawn00](https://www.github.com/Worldspawn00)
 
