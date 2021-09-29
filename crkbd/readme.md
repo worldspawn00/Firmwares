@@ -1,5 +1,7 @@
 # Corne Keyboard (CRKBD)
 
+This version supports the rotary encoders for the Worldspawn's Keebs version of the PCB
+
 Also known (incorrectly) as the `HeliDox`. 
 
 ![Crkbd](https://user-images.githubusercontent.com/736191/40575636-6fba63a4-6123-11e8-9ca0-3f990f1f9f4c.jpg)

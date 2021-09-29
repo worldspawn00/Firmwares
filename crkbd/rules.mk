@@ -17,7 +17,7 @@ BOOTLOADER = caterina
 #
 BOOTMAGIC_ENABLE = no       # Virtual DIP switch configuration
 MOUSEKEY_ENABLE = yes       # Mouse keys
-EXTRAKEY_ENABLE = no       # Audio control and System control
+EXTRAKEY_ENABLE = yes       # Audio control and System control
 CONSOLE_ENABLE = no         # Console for debug
 COMMAND_ENABLE = no        # Commands for debug and configuration
 NKRO_ENABLE = no            # Nkey Rollover - if this doesn't work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
@@ -27,16 +27,13 @@ AUDIO_ENABLE = no           # Audio output on port C6
 UNICODE_ENABLE = no         # Unicode
 BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
 RGBLIGHT_ENABLE = no       # Enable WS2812 RGB underlight.
+ENCODER_ENABLE = yes	   #enable encoder support
 
 # Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
 SLEEP_LED_ENABLE = no    # Breathing sleep LED during USB suspend
 
-CUSTOM_MATRIX = yes
-QUANTUM_LIB_SRC += 	i2c.c \
-					serial.c
-SRC += ssd1306.c
-
 # if firmware size over limit, try this option
 # CFLAGS += -flto
+LAYOUTS = split_3x5_3 split_3x6_3
 
-DEFAULT_FOLDER = crkbd/rev1
+DEFAULT_FOLDER = crkbd/rev1/legacy

@@ -21,7 +21,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 //#define USE_MATRIX_I2C
-
+#define ENCODERS_PAD_A { B4 }
+#define ENCODERS_PAD_B { B5 }
 /* Select hand configuration */
 
 #define MASTER_LEFT
