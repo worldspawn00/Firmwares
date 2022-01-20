@@ -36,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * | F15|| LCtrl | _FN |Alt|  Space  |  0|
    * `----'`-------------------------------'
    */
-    [_BASE] = LAYOUT(
+    [_BL] = LAYOUT(
 		        KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, 
 		        KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_7, 
 		KC_F13, KC_ENT, KC_A, KC_S, KC_D, KC_F, KC_G, KC_8, 
