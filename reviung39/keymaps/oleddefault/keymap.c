@@ -61,32 +61,51 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 }
 
 #ifdef OLED_DRIVER_ENABLE
+extern rgblight_config_t rgblight_config;
 
-oled_rotation_t oled_init_user(oled_rotation_t rotation) { return OLED_ROTATION_180; }
+oled_rotation_t oled_init_user(oled_rotation_t rotation) {
+    return OLED_ROTATION_270;  // flips the display 270 degrees
+}
 
 void oled_task_user(void) {
-    // Host Keyboard Layer Status
-    oled_write_P(PSTR("Layer: "), false);
+  // Host Keyboard Layer Status
+  oled_write_P(PSTR("Layer"), false);
+  switch (biton32(layer_state)) {
+    case _BASE:
+      oled_write_ln_P(PSTR(" BAS"), false);
+      break;
+    case _LOWER:
+      oled_write_ln_P(PSTR(" LWR"), false);
+      break;
+    case _RAISE:
+      oled_write_ln_P(PSTR(" RSE"), false);
+      break;
+    case _ADJUST:
+      oled_write_ln_P(PSTR(" ADJ"), false);
+      break;
+    default:
+      // Or use the write_ln shortcut over adding '\n' to the end of your string
+      oled_write_ln_P(PSTR(" UND"), false);
+  }
 
-    switch (get_highest_layer(layer_state)) {
-        case _LOWER:
-            oled_write_P(PSTR("L1\n"), false);
-            break;
-        case _RAISE:
-            oled_write_P(PSTR("L2\n"), false);
-            break;
-        case _ADJUST:
-            oled_write_P(PSTR("L3\n"), false);
-            break;
-        default:
-            // Or use the write_ln shortcut over adding '\n' to the end of your string
-            oled_write_ln_P(PSTR("LO\n"), false);
-    }
+  // Host Keyboard LED Status
+  uint8_t led_usb_state = host_keyboard_leds();
+  oled_write_P(PSTR("-----"), false);
+  oled_write_P(PSTR("Stats"), false);
+  oled_write_P(led_usb_state & (1<<USB_LED_NUM_LOCK) ? PSTR("num:*") : PSTR("num:."), false);
+  oled_write_P(led_usb_state & (1<<USB_LED_CAPS_LOCK) ? PSTR("cap:*") : PSTR("cap:."), false);
+  oled_write_P(led_usb_state & (1<<USB_LED_SCROLL_LOCK) ? PSTR("scr:*") : PSTR("scr:."), false);
 
-    // Host Keyboard LED Status
-    led_t led_state = host_keyboard_led_state();
-    oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR("    "), false);
-    oled_write_P(led_state.caps_lock ? PSTR("CAP ") : PSTR("    "), false);
-    oled_write_P(led_state.scroll_lock ? PSTR("SCR ") : PSTR("    "), false);
+  // Host Keyboard RGB backlight status
+  oled_write_P(PSTR("-----"), false);
+  oled_write_P(PSTR("Light"), false);
+
+  static char led_buf[30];
+  snprintf(led_buf, sizeof(led_buf) - 1, "RGB:%cM: %2d\nh: %2ds: %2dv: %2d\n",
+      rgblight_config.enable ? '*' : '.', (uint8_t)rgblight_config.mode,
+      (uint8_t)(rgblight_config.hue / RGBLIGHT_HUE_STEP),
+      (uint8_t)(rgblight_config.sat / RGBLIGHT_SAT_STEP),
+      (uint8_t)(rgblight_config.val / RGBLIGHT_VAL_STEP));
+  oled_write(led_buf, false);
 }
 #endif
