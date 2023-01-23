@@ -40,6 +40,8 @@ OPT_DEFS += -DINTERRUPT_CONTROL_ENDPOINT
 # Boot Section Size in *bytes*
 OPT_DEFS += -DBOOTLOADER_SIZE=4096
 
+# Supported qmk layouts
+LAYOUTS = ortho_4x12
 
 # Build Options
 #   comment out to disable the options.
