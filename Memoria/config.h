@@ -1,0 +1,13 @@
+#pragma once
+
+#define FORCE_NKRO
+
+#define BOOTMAGIC_LITE_ROW 0
+#define BOOTMAGIC_LITE_COLUMN 1
+
+#define MIDI_ADVANCED
+
+#define RGB_DI_PIN GP27
+#define DRIVER_LED_TOTAL 3
+#define RGBLED_NUM 3
+#define RGB_MATRIX_MAXIMUM_BRIGHTNESS 100
