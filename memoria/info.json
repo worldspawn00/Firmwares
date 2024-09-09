@@ -17,17 +17,15 @@
         "cols": ["GP19", "GP25", "GP24", "GP10", "GP9", "GP6", "GP5", "GP4", "GP3", "GP2", "GP1", "GP0"],
         "rows": ["GP28", "GP26", "GP29", "GP20", "GP23"]
     },
-    {
-      "encoder": {
+    "encoder": {
         "rotary": [
           { "pin_a": "GP11", "pin_b": "GP12", "resolution": 4 }
         ]
-      }
     },
     "processor": "RP2040",
     "url": "https://github.com/shinkaimayano/Memoria",
     "usb": {
-        "device_version": "2.0a",
+        "device_version": "2.0.0",
         "pid": "0x0003",
         "vid": "0x548C"
     },
