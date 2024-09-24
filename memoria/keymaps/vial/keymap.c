@@ -33,7 +33,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
 };
 #endif
 
-void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
+rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     if (layer_state_is (1)) {
         RGB_MATRIX_INDICATOR_SET_COLOR(2, 60, 15, 15);
     } else {
