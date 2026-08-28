@@ -1,0 +1,251 @@
+{
+    "keyboard_name": "Lily58Pro",
+    "manufacturer": "Worldspawn00",
+    "url": "https://github.com/worldspawn00",
+    "maintainer": "Worldspawn00",
+    "usb": {
+        "vid": "0x7983",
+        "pid": "0x4C4C",
+        "device_version": "1.0.0"
+    },
+    "features": {
+        "bootmagic": true,
+        "encoder": true,
+        "oled": true,
+        "rgblight": true
+    },
+    "matrix_pins": {
+        "cols": ["F6", "F7", "B1", "B3", "B2", "B6"],
+        "rows": ["C6", "D7", "E6", "B4", "B5"]
+    },
+    "diode_direction": "COL2ROW",
+    "encoder": {
+        "rotary": [
+            {"pin_a": "F5", "pin_b": "F4"}
+        ]
+    },
+    "split": {
+        "enabled": true,
+        "encoder": {
+            "right": {
+                "rotary": [
+                    {"pin_a": "F4", "pin_b": "F5"}
+                ]
+            }
+        },
+        "serial": {
+            "pin": "D2"
+        }
+    },
+    "ws2812": {
+        "pin": "D3"
+    },
+    "rgblight": {
+        "led_count": 70,
+        "max_brightness": 120,
+        "split_count": [35, 35]
+    },
+    "development_board": "promicro",
+    "build": {
+        "lto": true
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {"matrix": [0, 0], "x": 0, "y": 0.5},
+                {"matrix": [0, 1], "x": 1, "y": 0.375},
+                {"matrix": [0, 2], "x": 2, "y": 0.125},
+                {"matrix": [0, 3], "x": 3, "y": 0},
+                {"matrix": [0, 4], "x": 4, "y": 0.125},
+                {"matrix": [0, 5], "x": 5, "y": 0.25},
+
+                {"matrix": [5, 5], "x": 10.5, "y": 0.25},
+                {"matrix": [5, 4], "x": 11.5, "y": 0.125},
+                {"matrix": [5, 3], "x": 12.5, "y": 0},
+                {"matrix": [5, 2], "x": 13.5, "y": 0.125},
+                {"matrix": [5, 1], "x": 14.5, "y": 0.375},
+                {"matrix": [5, 0], "x": 15.5, "y": 0.5},
+
+                {"matrix": [1, 0], "x": 0, "y": 1.5},
+                {"matrix": [1, 1], "x": 1, "y": 1.375},
+                {"matrix": [1, 2], "x": 2, "y": 1.125},
+                {"matrix": [1, 3], "x": 3, "y": 1},
+                {"matrix": [1, 4], "x": 4, "y": 1.125},
+                {"matrix": [1, 5], "x": 5, "y": 1.25},
+
+                {"matrix": [6, 5], "x": 10.5, "y": 1.25},
+                {"matrix": [6, 4], "x": 11.5, "y": 1.125},
+                {"matrix": [6, 3], "x": 12.5, "y": 1},
+                {"matrix": [6, 2], "x": 13.5, "y": 1.125},
+                {"matrix": [6, 1], "x": 14.5, "y": 1.375},
+                {"matrix": [6, 0], "x": 15.5, "y": 1.5},
+
+                {"matrix": [2, 0], "x": 0, "y": 2.5},
+                {"matrix": [2, 1], "x": 1, "y": 2.375},
+                {"matrix": [2, 2], "x": 2, "y": 2.125},
+                {"matrix": [2, 3], "x": 3, "y": 2},
+                {"matrix": [2, 4], "x": 4, "y": 2.125},
+                {"matrix": [2, 5], "x": 5, "y": 2.25},
+
+                {"matrix": [7, 5], "x": 10.5, "y": 2.25},
+                {"matrix": [7, 4], "x": 11.5, "y": 2.125},
+                {"matrix": [7, 3], "x": 12.5, "y": 2},
+                {"matrix": [7, 2], "x": 13.5, "y": 2.125},
+                {"matrix": [7, 1], "x": 14.5, "y": 2.375},
+                {"matrix": [7, 0], "x": 15.5, "y": 2.5},
+
+                {"matrix": [3, 0], "x": 0, "y": 3.5},
+                {"matrix": [3, 1], "x": 1, "y": 3.375},
+                {"matrix": [3, 2], "x": 2, "y": 3.125},
+                {"matrix": [3, 3], "x": 3, "y": 3},
+                {"matrix": [3, 4], "x": 4, "y": 3.125},
+                {"matrix": [3, 5], "x": 5, "y": 3.25},
+                {"matrix": [4, 5], "x": 6, "y": 2.75},
+
+                {"matrix": [9, 5], "x": 9.5, "y": 2.75},
+                {"matrix": [8, 5], "x": 10.5, "y": 3.25},
+                {"matrix": [8, 4], "x": 11.5, "y": 3.125},
+                {"matrix": [8, 3], "x": 12.5, "y": 3},
+                {"matrix": [8, 2], "x": 13.5, "y": 3.125},
+                {"matrix": [8, 1], "x": 14.5, "y": 3.375},
+                {"matrix": [8, 0], "x": 15.5, "y": 3.5},
+
+                {"matrix": [4, 1], "x": 2.5, "y": 4.125},
+                {"matrix": [4, 2], "x": 3.5, "y": 4.15},
+                {"matrix": [4, 3], "x": 4.5, "y": 4.25},
+                {"matrix": [4, 4], "x": 6, "y": 4.25, "h": 1.5},
+
+                {"matrix": [9, 4], "x": 9.5, "y": 4.25, "h": 1.5},
+                {"matrix": [9, 3], "x": 11, "y": 4.25},
+                {"matrix": [9, 2], "x": 12, "y": 4.15},
+                {"matrix": [9, 1], "x": 13, "y": 4.15}
+            ]
+        }
+    }
+ "rgb_matrix": {
+        "animations": {
+            "gradient_up_down": true,
+            "gradient_left_right": true,
+            "alphas_mods": true,
+            "breathing": true,
+            "hue_wave": true,
+            "rainbow_moving_chevron": true,
+            "rainbow_beacon": true,
+            "solid_reactive_simple": true,
+            "solid_reactive": true
+        },
+        "driver": "ws2812",
+        "split_count": [35, 35],
+        "layout": [
+            //right side numbering here: https://i.etsystatic.com/19969480/r/il/d8561c/4045871025/il_1588xN.4045871025_pg1q.jpg
+            //left side x from left to right increases by ~14 so 14,29,43,58,72
+            //left side y bases increment each by 15: col 0 = 8, col 1 = 6, col 2 = 2, col 3 = 0, col 4 = 2, col 5 = 4
+
+            //left side
+            //top row esc-5
+            {"flags": 4, "matrix": [0, 0], "x": 0, "y": 8},   // L SW06 key: ESC
+            {"flags": 4, "matrix": [0, 1], "x": 14, "y": 6},   // L SW05 Key: 1
+            {"flags": 4, "matrix": [0, 2], "x": 29, "y": 2},   // L SW04 Key: 2
+            {"flags": 4, "matrix": [0, 3], "x": 43, "y": 0},   // L SW03 Key: 3
+            {"flags": 4, "matrix": [0, 4], "x": 58, "y": 2},   // L SW02 Key: 4
+            {"flags": 4, "matrix": [0, 5], "x": 72, "y": 4},    // L SW01 Key: 5
+
+            //2nd row tab-t
+            {"flags": 4, "matrix": [1, 0], "x": 0, "y": 23},   // L SW07 key: tab
+            {"flags": 4, "matrix": [1, 1], "x": 14, "y": 21},  // L SW08 key: q
+            {"flags": 4, "matrix": [1, 2], "x": 29, "y": 17},  // L SW09 key: w
+            {"flags": 4, "matrix": [1, 3], "x": 43, "y": 15},  // L SW10 key: e
+            {"flags": 4, "matrix": [1, 4], "x": 58, "y": 17},  // L SW11 key: r
+            {"flags": 4, "matrix": [1, 5], "x": 72, "y": 19},  // L SW12 key: t
+
+            //3rd row ctrl-g
+            {"flags": 4, "matrix": [2, 5], "x": 72, "y": 34},  // L SW18 key: g
+            {"flags": 4, "matrix": [2, 4], "x": 58, "y": 32},  // L SW17 key: f
+            {"flags": 4, "matrix": [2, 3], "x": 43, "y": 30},  // L SW16 key: d
+            {"flags": 4, "matrix": [2, 2], "x": 29, "y": 32},  // L SW15 key: s
+            {"flags": 4, "matrix": [2, 1], "x": 14, "y": 36},  // L SW14 key: a
+            {"flags": 4, "matrix": [2, 0], "x": 0, "y": 38},   // L SW13 key: ctrl
+
+            //4th row shift-b
+            {"flags": 4, "matrix": [3, 0], "x": 0, "y": 53},   // L SW19 key: shift
+            {"flags": 4, "matrix": [3, 1], "x": 14, "y": 51},  // L SW20 key: z
+            {"flags": 4, "matrix": [3, 2], "x": 29, "y": 47},  // L SW21 key: x
+            {"flags": 4, "matrix": [3, 3], "x": 43, "y": 45},  // L SW22 key: c
+            {"flags": 4, "matrix": [3, 4], "x": 58, "y": 47},  // L SW23 key: v
+            {"flags": 4, "matrix": [3, 5], "x": 72, "y": 49},  // L SW24 key: b
+
+            //inner key
+            {"flags": 4, "matrix": [4, 5], "x": 87, "y": 41},  // L SW25 key: [
+
+            //thumb cluster alt-space
+            {"flags": 4, "matrix": [4, 4], "x": 87, "y": 64},  // L SW26 key: space
+            {"flags": 4, "matrix": [4, 3], "x": 65, "y": 64},  // L SW27 key: win
+            {"flags": 4, "matrix": [4, 2], "x": 51, "y": 62},  // L SW28 key: lower
+            {"flags": 4, "matrix": [4, 1], "x": 36, "y": 62},  // L SW29 key: alt
+
+            //left side backlight, no matrix. "flags": 2: Defines an Underglow / Backlight LED.
+            {"flags": 2, "x": 96, "y": 64},                    // L SW 30 RGB1 backlight
+            {"flags": 2, "x": 32, "y": 64},                    // L SW 31 RGB2 backlight
+            {"flags": 2, "x": 0, "y": 64},                     // L SW 32 RGB3 backlight
+            {"flags": 2, "x": 0, "y": 32},                     // L SW 33 RGB4 backlight
+            {"flags": 2, "x": 18, "y": 0},                     // L SW 34 RGB5 backlight
+            {"flags": 2, "x": 74, "y": 0},                     // L SW 35 RGB6 backlight
+
+            //Right side add 80 to x
+
+            //top row 6-~
+            {"flags": 4, "matrix": [5, 5], "x": 152, "y": 4},  // R SW06 - Key: 6
+            {"flags": 4, "matrix": [5, 4], "x": 166, "y": 2},  // R SW05 - Key: 7
+            {"flags": 4, "matrix": [5, 3], "x": 181, "y": 0},  // R SW04 - Key: 8
+            {"flags": 4, "matrix": [5, 2], "x": 195, "y": 2},  // R SW03 - Key: 9
+            {"flags": 4, "matrix": [5, 1], "x": 210, "y": 6},  // R SW02 - Key: 0
+            {"flags": 4, "matrix": [5, 0], "x": 224, "y": 8}   // R SW01 - Key: ~
+
+            //2nd row y--
+            {"flags": 4, "matrix": [6, 0], "x": 224, "y": 23}, // R SW07 Key: -
+            {"flags": 4, "matrix": [6, 1], "x": 210, "y": 21}, // R SW08 Key: P
+            {"flags": 4, "matrix": [6, 2], "x": 195, "y": 17}, // R SW09 Key: O
+            {"flags": 4, "matrix": [6, 3], "x": 181, "y": 15}, // R SW10 Key: I
+            {"flags": 4, "matrix": [6, 4], "x": 166, "y": 17}, // R SW11 Key: U
+            {"flags": 4, "matrix": [6, 5], "x": 152, "y": 19}, // R SW12 key: Y
+
+            //3rd row H-"
+            {"flags": 4, "matrix": [7, 5], "x": 152, "y": 34}, // R SW18 Key: H
+            {"flags": 4, "matrix": [7, 4], "x": 166, "y": 32}, // R SW17 Key: J
+            {"flags": 4, "matrix": [7, 3], "x": 181, "y": 30}, // R SW16 Key: K
+            {"flags": 4, "matrix": [7, 2], "x": 195, "y": 32}, // R SW15 Key: L
+            {"flags": 4, "matrix": [7, 1], "x": 210, "y": 36}, // R SW14 Key: ;
+            {"flags": 4, "matrix": [7, 0], "x": 224, "y": 38}, // R SW13 Key: ENTER
+
+            //4th row N-shift
+            {"flags": 4, "matrix": [8, 0], "x": 224, "y": 53}, // R SW19 Key: RSHIFT
+            {"flags": 4, "matrix": [8, 1], "x": 210, "y": 51}, // R SW20 Key: /
+            {"flags": 4, "matrix": [8, 2], "x": 195, "y": 47}, // R SW21 Key: .
+            {"flags": 4, "matrix": [8, 3], "x": 181, "y": 45}, // R SW22 Key: ,
+            {"flags": 4, "matrix": [8, 4], "x": 166, "y": 47}, // R SW23 Key: M
+            {"flags": 4, "matrix": [8, 5], "x": 152, "y": 49}, // R SW24 Key: N
+
+            //inner key ]
+            {"flags": 4, "matrix": [9, 5], "x": 137, "y": 41}, // R SW25 Key: ]
+
+            //5th row thumb cluster  rgui-enter
+            {"flags": 4, "matrix": [9, 4], "x": 137, "y": 64}, // R SW26 Key: ENTER
+            {"flags": 4, "matrix": [9, 3], "x": 159, "y": 64}, // R SW27 Key: RAISE
+            {"flags": 4, "matrix": [9, 2], "x": 173, "y": 62}, // R SW28 BACKSPACE
+            {"flags": 4, "matrix": [9, 1], "x": 188, "y": 62}, // R SW29 Key: RGUI
+
+            //Right side backlight, no matrix. "flags": 2: Defines an Underglow / Backlight LED.
+            {"flags": 2, "x": 128, "y": 64},                   // R SW 30 RGB1 backlight
+            {"flags": 2, "x": 192, "y": 64},                   // R SW 31 RGB2 backlight
+            {"flags": 2, "x": 224, "y": 64},                   // R SW 32 RGB3 backlight
+            {"flags": 2, "x": 224, "y": 32},                   // R SW 33 RGB4 backlight
+            {"flags": 2, "x": 206, "y": 0},                    // R SW 34 RGB5 backlight
+            {"flags": 2, "x": 150, "y": 0}                   // R SW 35 RGB6 backlight
+        ],
+        "max_brightness": 120,
+        "react_on_keyup": true,
+        "sleep": true
+    }
+}
+//flash with qmk flash -kb lily58/light -km lily58l -e CONVERT_TO=rp2040_ce -bl uf2-split-left
+// and qmk flash -kb lily58/light -km lily58l -e CONVERT_TO=rp2040_ce -bl uf2-split-right
