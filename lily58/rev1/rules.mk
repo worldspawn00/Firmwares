@@ -1,0 +1,6 @@
+EXTRAKEY_ENABLE = yes
+BOOTMAGIC_ENABLE = yes
+LTO_ENABLE = no
+RGBLIGHT_ENABLE = no
+RGB_MATRIX_ENABLE = yes     # Turn on advanced matrix
+RGB_MATRIX_DRIVER = ws2812
